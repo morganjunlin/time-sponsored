@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing Order component should grab a snapshot of the component 1`] = `
+<section
+  className="order-modal"
+>
+  <section
+    className="order-delivery-container"
+  >
+    <section
+      className="order-delivery-exit"
+    >
+      <button>
+        X
+      </button>
+      <h3>
+        Your order settings
+      </h3>
+    </section>
+    <section
+      className="order-delivery-pickup-buttons"
+    >
+      <button>
+        Delivery
+      </button>
+      <button
+        onClick={[Function]}
+      >
+        Pickup
+      </button>
+    </section>
+    <section
+      className="order-delivery-whenwouldyou"
+    >
+      <h5>
+        When would you like your order?
+      </h5>
+      <button
+        onClick={[Function]}
+      >
+        ASAP (35–45m)
+      </button>
+    </section>
+    <section
+      className="order-delivery-address"
+    >
+      <h5>
+        Delivery address
+      </h5>
+      <div
+        className="order-delivery-input-container"
+      >
+        <i
+          className="fas fa-map-marker-alt"
+        />
+        <input
+          className="order-delivery-input-field"
+          placeholder="Street address, city, state"
+        />
+      </div>
+    </section>
+    <section
+      className="order-delivery-update"
+    >
+      <button>
+        Update
+      </button>
+    </section>
+  </section>
+</section>
+`;
