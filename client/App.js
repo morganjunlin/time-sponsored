@@ -33,6 +33,7 @@ class App extends React.Component{
 		// console.log(this.state.counter)
 		return(
 			<section>
+				<h1>Hello</h1>
 				<button id="counter_button" onClick={this.increment}>Click</button>
 			{
 				(this.state.data) &&
