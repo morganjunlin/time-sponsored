@@ -9,7 +9,7 @@ describe('testing App component', ()=> {
 		expect(shallow(<App />).length).toEqual(1)
 	})
 
-	it('should grab a snapshot of the component', ()=> {
+	it('should grab a snapshot of the component.', ()=> {
 		const component = renderer.create(<App />)
 		let tree = component.toJSON();
 		expect(tree).toMatchSnapshot();
