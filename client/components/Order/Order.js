@@ -42,22 +42,3 @@ class Order extends React.Component{
 }
 
 export default Order
-
-
-			
-			// <section className="order-card slide-in-bottom">
-			// 	<section id="order-header">
-			// 		<button onClick={toggleModal}>close</button>
-			// 	</section>
-			// 	<section>
-			// 		<h1>Your order settings</h1>
-			// 	</section>
-			// 	<section className="order-put-it-center order-button1" >
-			// 		<button>Delivery</button>
-			// 		<button>Pickup</button>
-			// 	</section>
-			// 	<section>
-			// 		When would you like to order?
-			// 	</section>
-
-			// </section>

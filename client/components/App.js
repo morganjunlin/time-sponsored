@@ -3,8 +3,6 @@ import './App.css';
 import Modal from './Modal/Modal';
 import Order from './Order/Order';
 
-const axios = require('axios')
-
 class App extends React.Component{
 	constructor(props){
 		super(props)
