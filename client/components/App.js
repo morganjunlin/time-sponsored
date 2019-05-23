@@ -3,6 +3,8 @@ import './App.css';
 import Modal from './Modal/Modal';
 import Order from './Order/Order';
 
+import Sponsor from './Sponsor/Sponsor';
+
 class App extends React.Component{
 	constructor(props){
 		super(props)
@@ -33,14 +35,19 @@ class App extends React.Component{
 						<p className="order-no-minimum">No minimum</p>
 					</section>
 					<button className="order-change" onClick={this.toggleModal}>Change</button> <br />
-
+				</section>
+				<section>
 					{
 						(isModalOpen) &&
 						<Modal>
 							<Order isModalOpen={isModalOpen} toggleModal={this.toggleModal}/>
 						</Modal>
 					}
-
+				</section>
+				<section style={{margin: "3rem"}}>
+				</section>
+				<section className="app-sponsor-container">
+					<Sponsor />
 				</section>
 			</section>
 			)

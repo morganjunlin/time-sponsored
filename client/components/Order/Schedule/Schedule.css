@@ -39,11 +39,86 @@
 
 .order-schedule-buttons{
     padding: 16px 32px;
+    display: flex;
+    justify-content: center;
 }
 
 
 
 
+.order-schedule-buttons button{
+    cursor: pointer;
+    width: 100%;
+    line-height: 2.3;
+    font-weight: bold
+}
+
+.order-schedule-buttons-selected{
+    background: #0070eb;
+    border: 2px solid #0070eb;
+    color: white;
+}
+
+.order-schedule-buttons-not-selected{
+    background: white;
+    color: #0058b8;
+    border: 2px solid rgba(0,0,0,.2); 
+}
+
+.order-schedule-buttons-not-selected:hover{
+    background: #0058b8;
+    color: white;
+    border: 2px solid #0058b8; 
+}
+
+.order-schedule-buttons button:first-child {
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+}
+
+.order-schedule-buttons button:nth-child(3) {
+    border-radius: 0 4px 4px 0;
+    border-left: none;
+}
+
+
+
+
+.order-schedule-items{
+    padding: 16px 32px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.order-schedule-items-asap{
+    text-align: center;
+}
+.order-schedule-items-asap h5{
+    margin: 0;
+    line-height: 1.6;
+}
+
+.order-schedule-items-asap p {
+    line-height: 1.6;
+    margin: 0;
+    font-size: 12px;
+    color: rgba(0,0,0,.55);
+}
+
+.order-schedule-items-today{
+    width: 100%;
+}
+
+.order-schedule-items-today-select{
+    width: 100%;
+    border: 2px solid rgba(0,0,0,0.20);
+    padding: 6px;
+}
+
+.order-schedule-items-today-select:hover{
+    border-color: rgba(0,0,0,.7);
+}
 
 .order-schedule-pickup-button{
     padding: 16px 32px;
