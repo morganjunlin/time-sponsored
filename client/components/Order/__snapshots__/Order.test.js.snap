@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`testing Order component should grab a snapshot of the component 1`] = `
+exports[`testing Order component should grab a snapshot of the component. 1`] = `
 <section
   className="order-modal"
 >

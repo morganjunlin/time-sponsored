@@ -7,10 +7,10 @@
     "test": "jest",
     "test:w": "jest --watchAll",
     "test:c": "jest --coverage",
-    "start": "node server/index.js",
     "dev:server": "nodemon server/index.js",
     "dev:static": "webpack -d -w",
     "dev:client": "webpack-dev-server --open -d",
+    "start": "node server/index.js",
     "build": "webpack -p"
   },
   "author": "James Jongho Kim",
