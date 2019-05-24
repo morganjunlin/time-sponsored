@@ -5,6 +5,15 @@ class Card extends React.Component{
 	constructor(props){
 		super(props)
 		this.state={}
+		this.starGenerator=this.starGenerator.bind(this)
+	}
+
+	starGenerator(rate){
+		let emptyArr = new Array(5).fill(0)
+		let adjRate = rate - 1
+		return emptyArr.map((value,index)=> {
+			return (index <= adjRate) ? <img key={index} src="ystar.png"alt="star"/> : <img key={index} src="gstar.png"alt="star"/>
+		})
 	}
 
 	render(){
@@ -24,8 +33,10 @@ class Card extends React.Component{
 								<p id="sponser-card-content-waiting">{item.waiting}</p>
 								<p id="sponser-card-content-extra">{item.extra}</p>
 							</div>
-							<div>
-								<p id="sponser-card-content-waiting">{item.rate}</p>
+							<div style={{textAlign : "right"}}>
+								{
+									this.starGenerator(item.rate)
+								}								
 								<p id="sponser-card-content-extra">{item.count} ratings</p>
 							</div>
 						</div>

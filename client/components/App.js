@@ -10,28 +10,38 @@ class App extends React.Component{
 		super(props)
 		this.state= {
 			url : null,
-			isModalOpen : false
+			isModalOpen : false,
+			deliveryTime : ''
 		}
 		this.toggleModal = this.toggleModal.bind(this)
+		this.randomSeed = this.randomSeed.bind(this)
 	}
 
 	componentDidMount(){
 	  	let url = window.location.href
 	  	url = url.split("/")[3]
 	  	this.setState({url})
+
+	  	this.randomSeed()
 	}
 
 	toggleModal(){
 		this.setState({isModalOpen: !this.state.isModalOpen})
 	}
 
+	randomSeed(){
+		let set = ['(15-25m)', '(25-35m)', '(35-45m)', '(45-55m)','(55-65m)', '(55-65m)']
+		let deliveryTime = set[Math.floor((Math.random() * 5) + 0)]
+		this.setState({deliveryTime})
+	}
+
 	render(){
 		const {isModalOpen} = this.state
 		return(
-			<section>Hello world
+			<section>
 				<section className="order-container">
 					<section className="order-status">
-						<p>Delivery, ASAP (35-45m)</p>
+						<p>Delivery, ASAP {this.state.deliveryTime}</p>
 						<p className="order-no-minimum">No minimum</p>
 					</section>
 					<button className="order-change" onClick={this.toggleModal}>Change</button> <br />

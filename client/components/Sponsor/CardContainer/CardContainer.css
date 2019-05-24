@@ -1,4 +1,42 @@
 .sponsor-card-container{
 	display: flex;
+	align-items: center;
+}
+.sponsor-card-container-sub{
+	display: flex;
 	justify-content: left;
+}
+
+.sponsor-card-left{
+	position: relative;
+	left: 25px;
+}
+
+.sponsor-card-left button{
+	color: #0070eb;
+	background-color: white;
+    border-radius: 50%;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    box-shadow: 2px 2px rgba(0,0,0,0.2);
+}
+
+.sponsor-card-right{
+	position: relative;
+	left: -25px;
+}
+
+.sponsor-card-right button{
+	color: #0070eb;
+	background-color: white;
+    border-radius: 50%;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    box-shadow: 2px 2px rgba(0,0,0,0.2);
+}
+
+.sponsor-btn-invisible{
+	visibility: hidden;
 }

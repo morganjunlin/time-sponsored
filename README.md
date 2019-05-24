@@ -14,9 +14,8 @@ The other section is a component that has a slideshow like a carousel. It shows 
 ### Usage
 
 ```
-mkdir your_new_folder
-cd your_new_folder
 git clone https://github.com/hrla29-group-targaryen/time-sponsored.git
+cd time-sponsored
 npm install
 npm start
 ```
