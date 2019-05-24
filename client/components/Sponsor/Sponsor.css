@@ -2,7 +2,7 @@
 	width: 100%;
 }
 
-.sponsor-container p {
-	font-size: 23.3px;
-	margin: 0;
+#sponsor-container {
+	font-size: 22.3px;
+	margin: 0 0 12px 0;
 }
