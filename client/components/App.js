@@ -28,7 +28,7 @@ class App extends React.Component{
 	render(){
 		const {isModalOpen} = this.state
 		return(
-			<section>
+			<section>Hello world
 				<section className="order-container">
 					<section className="order-status">
 						<p>Delivery, ASAP (35-45m)</p>
