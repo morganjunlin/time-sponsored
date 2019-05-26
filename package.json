@@ -10,6 +10,7 @@
     "dev:server": "nodemon server/index.js",
     "dev:static": "webpack -d -w",
     "dev:client": "webpack-dev-server --open -d",
+    "dev:seed": "node database/seed.js",
     "start": "node server/index.js",
     "build": "webpack -p"
   },

@@ -20,6 +20,8 @@
     font-size: 32px;
     cursor: pointer;
     box-shadow: 2px 2px rgba(0,0,0,0.2);
+    width:35px;
+    height:35px;
 }
 
 .sponsor-card-right{
@@ -35,6 +37,8 @@
     font-size: 32px;
     cursor: pointer;
     box-shadow: 2px 2px rgba(0,0,0,0.2);
+    width:35px;
+    height:35px;
 }
 
 .sponsor-btn-invisible{

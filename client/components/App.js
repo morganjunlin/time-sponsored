@@ -3,7 +3,7 @@ import './App.css';
 import Modal from './Modal/Modal';
 import Order from './Order/Order';
 
-import Sponsor from './Sponsor/Sponsor';
+// import Sponsor from './Sponsor/Sponsor';
 
 class App extends React.Component{
 	constructor(props){
@@ -56,9 +56,13 @@ class App extends React.Component{
 				</section>
 				<section style={{margin: "3rem"}}>
 				</section>
-				<section className="app-sponsor-container">
-					<Sponsor />
-				</section>
+
+				{
+				// <section className="app-sponsor-container">
+				// 	<Sponsor />
+				// </section>
+				}
+
 			</section>
 			)
 	}

@@ -1,8 +1,16 @@
+
 .sponsor-container {
-	width: 100%;
+/*	width: 100%;*/
+
+
+    max-width: 75%;
+    background: white;
+    padding: 15px;
 }
 
 #sponsor-container {
 	font-size: 22.3px;
 	margin: 0 0 12px 0;
 }
+
+
