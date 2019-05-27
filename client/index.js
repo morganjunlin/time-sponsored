@@ -11,38 +11,38 @@ ReactDOM.render(<App />, document.getElementById('time-root'))
 ReactDOM.render(<Sponsor />, document.getElementById('sponsored-root'))
 
 
-const Intro = () => {
-	return(
-		<section style={{minHeight: "50vh", fontSize: "10rem"}}>Intro
-		</section>
-		)
-}
+// const Intro = () => {
+// 	return(
+// 		<section style={{minHeight: "50vh", fontSize: "10rem"}}>Intro
+// 		</section>
+// 		)
+// }
 
-const Menu = () => {
-	return(
-		<section style={{minHeight: "120vh", fontSize: "10rem", borderBottom: "1px solid rgba(0,0,0,.2)"}}>Menu
-		</section>
-		)
-}
+// const Menu = () => {
+// 	return(
+// 		<section style={{minHeight: "120vh", fontSize: "10rem", borderBottom: "1px solid rgba(0,0,0,.2)"}}>Menu
+// 		</section>
+// 		)
+// }
 
-const About = () => {
-	return(
-		<section style={{minHeight: "20vh", fontSize: "10rem", borderBottom: "1px solid rgba(0,0,0,.2)"}}>About
-		</section>
-		)
-}
+// const About = () => {
+// 	return(
+// 		<section style={{minHeight: "20vh", fontSize: "10rem", borderBottom: "1px solid rgba(0,0,0,.2)"}}>About
+// 		</section>
+// 		)
+// }
 
-const Reviews = () => {
-	return(
-		<section style={{minHeight: "100vh", fontSize: "10rem", borderBottom: "1px solid rgba(0,0,0,.2)"}}>Reviews
-		</section>
-		)
-}
+// const Reviews = () => {
+// 	return(
+// 		<section style={{minHeight: "100vh", fontSize: "10rem", borderBottom: "1px solid rgba(0,0,0,.2)"}}>Reviews
+// 		</section>
+// 		)
+// }
 
-ReactDOM.render(<Intro />, document.getElementById('fake-intro-root'))
-ReactDOM.render(<Menu />, document.getElementById('fake-menu-root'))
-ReactDOM.render(<About />, document.getElementById('fake-about-root'))
-ReactDOM.render(<Reviews />, document.getElementById('fake-reviews-root'))
+// ReactDOM.render(<Intro />, document.getElementById('fake-intro-root'))
+// ReactDOM.render(<Menu />, document.getElementById('fake-menu-root'))
+// ReactDOM.render(<About />, document.getElementById('fake-about-root'))
+// ReactDOM.render(<Reviews />, document.getElementById('fake-reviews-root'))
 
 
 let menuPageNav = document.getElementById("menuPageNav-content")
