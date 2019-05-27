@@ -1,7 +1,7 @@
 import React from 'react'
 import './Pickup.css'
 
-const Pickup = ({toggleModal,route_changer}) => {
+const Pickup = ({toggleModal,route_changer,data}) => {
 	return(
 		<section className="order-delivery-container">
 
@@ -17,7 +17,7 @@ const Pickup = ({toggleModal,route_changer}) => {
 
 			<section className="order-delivery-whenwouldyou">
 				<h5>When would you like your order?</h5>
-				<button onClick={()=>route_changer("schedule")}>ASAP (35–45m)</button>
+				<button onClick={()=>route_changer("schedule")}>ASAP {(data) && <span>{`(${data.waitingtime}m)`}</span>}</button>
 			</section>
 
 			<section className="order-delivery-update">

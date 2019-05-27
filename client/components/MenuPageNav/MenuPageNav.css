@@ -1,0 +1,54 @@
+.menuPageNav-container{
+	max-width: 75%;
+    background: white;
+    padding: 0 15px;
+    min-height: 18px;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+}
+
+.menuPageNav-content{
+    display: flex;
+    text-align: center;
+	margin: 0 26px;
+	font-weight: 900;
+}
+
+.menuPageNav-content a{
+	margin-right: 15px;
+	cursor: pointer;
+	text-decoration: none;
+	color: black;
+  padding: 15px 0;
+}
+
+.menuPageNav-menu{
+    border-bottom: 3px solid blue;
+}
+
+.menuPageNav-content a:nth-child(2){
+  color: rgba(0,0,0,0.55);
+}
+
+.menuPageNav-content a:nth-child(2):hover{
+  color: black;
+}
+
+.menuPageNav-content a:nth-child(3){
+  color: rgba(0,0,0,0.55);
+}
+
+.menuPageNav-content a:nth-child(3):hover{
+  color: black;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.menuPageNav-sticky {
+  position: fixed;
+  top: 0;
+  width: 75%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.menuPageNav-sticky-content {
+  padding-top: 80px;
+}

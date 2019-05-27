@@ -1,7 +1,7 @@
 const routes = require('express').Router()
 const Grubhub = require('../database/models')
 
-routes.get('/target/:id', (req,res)=> {
+routes.get('/data/:id', (req,res)=> {
 	const {id} = req.params
 	Grubhub.findOne({ "id": Number(id) })
 	.exec((err, docs)=> {

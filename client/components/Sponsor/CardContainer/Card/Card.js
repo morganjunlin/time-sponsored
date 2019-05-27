@@ -18,26 +18,27 @@ class Card extends React.Component{
 
 	render(){
 		const {item} = this.props
+		console.log(item)
 		return(
 			<section className="sponser-card">
 			{
 				(item) &&
 				(
 					<div>
-					<img alt="food" src={item.image} />
+					<img alt="food" src={item.image} width="280px" height="140px"/>
 					<div className="sponser-card-content">
 						<p id="sponser-card-content-name">{item.name}</p>
-						<p id="sponser-card-content-category">{item.category}</p>
+						<p id="sponser-card-content-category">{item.categories[0]}, {item.categories[1]}</p>
 						<div id="sponser-card-subcontent">
 							<div>
-								<p id="sponser-card-content-waiting">{item.waiting}</p>
-								<p id="sponser-card-content-extra">{item.extra}</p>
+								<p id="sponser-card-content-waiting">{item.waitingtime} mins</p>
+								<p id="sponser-card-content-extra">"$0 min"</p>
 							</div>
 							<div style={{textAlign : "right"}}>
 								{
-									this.starGenerator(item.rate)
+									this.starGenerator(item.ratings)
 								}								
-								<p id="sponser-card-content-extra">{item.count} ratings</p>
+								<p id="sponser-card-content-extra">{item.counts} ratings</p>
 							</div>
 						</div>
 

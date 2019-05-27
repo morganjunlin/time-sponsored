@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card/Card.js';
 import './CardContainer.css';
-import {fake_data} from '../fake_data';
+import axios from 'axios';
 
 class CardContainer extends React.Component{
 	constructor(props){
@@ -13,21 +13,30 @@ class CardContainer extends React.Component{
 			group4: [],
 			current: 'group1'
 		}
+		this.getSponsoredData=this.getSponsoredData.bind(this)
 		this.splitData=this.splitData.bind(this)
 		this.changeDataSet=this.changeDataSet.bind(this)
 	}
 
 	componentDidMount(){
-		this.splitData()
+		this.getSponsoredData()
 	}
 
-	splitData(){
-		let data = fake_data
-		let group1 = data.slice(0,3)
-		let group2 = data.slice(3,6)
-		let group3 = data.slice(6,9)
-		let group4 = data.slice(9,12)
-		this.setState({group1, group2, group3, group4})
+	getSponsoredData(){
+		const id = window.location.href.split("id=")[1]
+	  	axios.get(`http://localhost:3000/api/sponsored/${id}`)
+	  	.then(({data}) => this.splitData(data))
+	  	.catch(e=>console.log(e))
+	}
+
+	splitData(data){
+		if (data !== null) {
+			let group1 = data.slice(0,3)
+			let group2 = data.slice(3,6)
+			let group3 = data.slice(6,9)
+			let group4 = data.slice(9,12)
+			this.setState({group1, group2, group3, group4})
+		}
 	}
 
 	changeDataSet(input){

@@ -37,9 +37,16 @@ class Schedule extends React.Component{
 		if (button_selected === 'asap') {
 			return(
 				<section className="order-schedule-items-asap">
-					<h5>Grubhub Restaurant</h5>
-					<h5>eta: 30-40 min</h5>
-					<p>+20min for orders over $150</p>
+				{
+					(this.props.data) &&
+					(
+					<div>
+						<h5>{this.props.data.name}</h5>
+						<h5>eta: {this.props.data.waitingtime} min</h5>
+						<p>+20min for orders over $150</p>
+					</div>
+					)
+				}
 				</section>
 				)
 		} else if (button_selected === 'today'){

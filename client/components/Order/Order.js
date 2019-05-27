@@ -22,11 +22,11 @@ class Order extends React.Component{
 
 	view_controller(route){
 		if (route === 'delivery') {
-			return <Delivery toggleModal={this.props.toggleModal} route_changer={this.route_changer}/>
+			return <Delivery toggleModal={this.props.toggleModal} route_changer={this.route_changer} data={this.props.data}/>
 		} else if (route === 'pickup') {
-			return <Pickup toggleModal={this.props.toggleModal} route_changer={this.route_changer}/>
+			return <Pickup toggleModal={this.props.toggleModal} route_changer={this.route_changer} data={this.props.data}/>
 		} else if (route === 'schedule') {
-			return <Schedule toggleModal={this.props.toggleModal} route_changer={this.route_changer}/>
+			return <Schedule toggleModal={this.props.toggleModal} route_changer={this.route_changer} data={this.props.data}/>
  		}
 	}
 
