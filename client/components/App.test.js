@@ -9,10 +9,19 @@ describe('testing App component', ()=> {
 		expect(shallow(<App />).length).toEqual(1)
 	})
 
-	it('should grab a snapshot of the component.', ()=> {
-		const component = renderer.create(<App />)
-		let tree = component.toJSON();
-		expect(tree).toMatchSnapshot();
+	it('should render componentDidMount()', ()=> {
+		let wrapper = shallow(<App />)
+		let instance = wrapper.instance()
+		jest.spyOn(instance, 'getRestaurantData')
+		instance.componentDidMount()
+		expect(instance.getRestaurantData).toHaveBeenCalledTimes(1)
 	})
 
+	it('should render state', ()=> {
+		let wrapper = shallow(<App />)
+		expect(wrapper.state().isModalOpen).toEqual(false)
+		expect(wrapper.state().data).toEqual(null)
+		wrapper.instance().toggleModal()
+		expect(wrapper.state().isModalOpen).toEqual(true)
+	})
 })

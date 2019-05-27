@@ -11,13 +11,13 @@ const Pickup = ({toggleModal,route_changer,data}) => {
 			</section>
 
 			<section className="order-pickup-delivery-buttons">
-				<button onClick={()=>route_changer("delivery")}>Delivery</button>
+				<button id="order-pickup-delivery-buttons-delivery" onClick={()=>route_changer("delivery")}>Delivery</button>
 				<button>Pickup</button>
 			</section>
 
 			<section className="order-delivery-whenwouldyou">
 				<h5>When would you like your order?</h5>
-				<button onClick={()=>route_changer("schedule")}>ASAP {(data) && <span>{`(${data.waitingtime}m)`}</span>}</button>
+				<button id="order-delivery-whenwouldyou" onClick={()=>route_changer("schedule")}>ASAP {(data) && <span>{`(${data.waitingtime}m)`}</span>}</button>
 			</section>
 
 			<section className="order-delivery-update">

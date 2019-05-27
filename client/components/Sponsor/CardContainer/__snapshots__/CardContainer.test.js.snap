@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`testing CardContainer component should grab a snapshot of the component. 1`] = `
+<section
+  className="sponsor-card-container"
+>
+  <div
+    className="sponsor-card-left sponsor-btn-invisible"
+  >
+    <button
+      id="sponsor-card-container-button-prev"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-angle-left"
+      />
+    </button>
+  </div>
+  <div
+    className="sponsor-card-container-sub"
+  />
+  <div
+    className="sponsor-card-right"
+  >
+    <button
+      id="sponsor-card-container-button-next"
+      onClick={[Function]}
+    >
+      <i
+        className="fas fa-angle-right"
+      />
+    </button>
+  </div>
+</section>
+`;

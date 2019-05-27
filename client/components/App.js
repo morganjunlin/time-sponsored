@@ -4,6 +4,7 @@ import Modal from './Modal/Modal';
 import Order from './Order/Order';
 
 import axios from 'axios';
+import {APIgetRestaurantData} from './api/api';
 
 class App extends React.Component{
 	constructor(props){
@@ -18,13 +19,13 @@ class App extends React.Component{
 	}
 
 	componentDidMount(){
-	  	this.getRestaurantData()
+		const id = window.location.href.split("id=")[1]
+	  	this.getRestaurantData(axios, id)
 	}
 
-	getRestaurantData(){
-		const id = window.location.href.split("id=")[1]
-	  	axios.get(`http://localhost:3000/api/data/${id}`)
-	  	.then(({data}) => this.setState({data}))
+	getRestaurantData(axios, id){
+	  	APIgetRestaurantData(axios, id)
+	  	.then(data => this.setState({data}))
 	  	.catch(e=>console.log(e))
 	}
 

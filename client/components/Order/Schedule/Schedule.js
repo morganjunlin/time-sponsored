@@ -1,7 +1,6 @@
 import React from 'react'
 import './Schedule.css'
 import Calendar from './Calendar/Calendar'
-import moment from 'moment'
 
 class Schedule extends React.Component{
 	constructor(props){
@@ -26,9 +25,9 @@ class Schedule extends React.Component{
 
 		return(
 			<section className="order-schedule-buttons">
-				<button className={styleASAP} onClick={()=>this.button_changer('asap')}>ASAP</button>
-				<button className={styleToday} onClick={()=>this.button_changer('today')}>Today</button>
-				<button className={styleLater} onClick={()=>this.button_changer('later')}>Later</button>
+				<button id="order-schedule-buttons-asap" className={styleASAP} onClick={()=>this.button_changer('asap')}>ASAP</button>
+				<button id="order-schedule-buttons-today" className={styleToday} onClick={()=>this.button_changer('today')}>Today</button>
+				<button id="order-schedule-buttons-later" className={styleLater} onClick={()=>this.button_changer('later')}>Later</button>
 			</section>
 			)
 	}
@@ -84,7 +83,7 @@ class Schedule extends React.Component{
 		<section className="order-schedule-container">
 
 			<section className="order-schedule-exit">
-				<button onClick={()=>route_changer("delivery")}><i className="fas fa-angle-left"></i></button>
+				<button id="order-schedule-exit" onClick={()=>route_changer("delivery")}><i className="fas fa-angle-left"></i></button>
 				<h3>Schedule my order</h3>
 			</section>
 

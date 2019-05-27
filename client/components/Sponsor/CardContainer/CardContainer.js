@@ -2,6 +2,7 @@ import React from 'react';
 import Card from './Card/Card.js';
 import './CardContainer.css';
 import axios from 'axios';
+import { APIgetSponsoredData } from '../../api/api';
 
 class CardContainer extends React.Component{
 	constructor(props){
@@ -11,7 +12,8 @@ class CardContainer extends React.Component{
 			group2: [],
 			group3: [],
 			group4: [],
-			current: 'group1'
+			current: 'group1',
+			error: false
 		}
 		this.getSponsoredData=this.getSponsoredData.bind(this)
 		this.splitData=this.splitData.bind(this)
@@ -19,14 +21,14 @@ class CardContainer extends React.Component{
 	}
 
 	componentDidMount(){
-		this.getSponsoredData()
+		const id = window.location.href.split("id=")[1]
+		this.getSponsoredData(axios, id)
 	}
 
-	getSponsoredData(){
-		const id = window.location.href.split("id=")[1]
-	  	axios.get(`http://localhost:3000/api/sponsored/${id}`)
-	  	.then(({data}) => this.splitData(data))
-	  	.catch(e=>console.log(e))
+	getSponsoredData(axios, id){
+	  	APIgetSponsoredData(axios, id)
+		.then(data => this.splitData(data))
+		.catch(e=> this.setState({error:true}))
 	}
 
 	splitData(data){
@@ -73,7 +75,7 @@ class CardContainer extends React.Component{
 			<section className="sponsor-card-container">
 
 				<div className={leftButtonStyle}>
-					<button onClick={()=>this.changeDataSet("prev")}><i className="fas fa-angle-left"></i></button>
+					<button id="sponsor-card-container-button-prev" onClick={()=>this.changeDataSet("prev")}><i className="fas fa-angle-left"></i></button>
 				</div>
 
 				<div className="sponsor-card-container-sub">
@@ -84,7 +86,7 @@ class CardContainer extends React.Component{
 				</div>
 
 				<div className={rightButtonStyle}>
-					<button onClick={()=>this.changeDataSet("next")}><i className="fas fa-angle-right"></i></button>
+					<button id="sponsor-card-container-button-next" onClick={()=>this.changeDataSet("next")}><i className="fas fa-angle-right"></i></button>
 				</div>
 
 			</section>

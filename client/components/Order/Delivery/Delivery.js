@@ -1,7 +1,7 @@
 import React from 'react'
 import './Delivery.css'
 
-const Delivery = ({toggleModal,route_changer, data}) => {
+const Delivery = ({toggleModal, route_changer, data}) => {
 	return(
 		<section className="order-delivery-container">
 
@@ -11,13 +11,13 @@ const Delivery = ({toggleModal,route_changer, data}) => {
 			</section>
 
 			<section className="order-delivery-pickup-buttons">
-				<button>Delivery</button>
-				<button onClick={()=>route_changer("pickup")}>Pickup</button>
+				<button className="order-delivery-pickup-buttons-delivery">Delivery</button>
+				<button id="order-delivery-pickup-buttons-pickup" className="order-delivery-pickup-buttons-pickup" onClick={()=>route_changer("pickup")}>Pickup</button>
 			</section>
 
 			<section className="order-delivery-whenwouldyou">
 				<h5>When would you like your order?</h5>
-				<button onClick={()=>route_changer("schedule")}>ASAP {(data) && <span>{`(${data.waitingtime}m)`}</span>}</button>
+				<button id="order-delivery-whenwouldyou" onClick={()=>route_changer("schedule")}>ASAP {(data) && <span>{`(${data.waitingtime}m)`}</span>}</button>
 			</section>
 
 			<section className="order-delivery-address">
