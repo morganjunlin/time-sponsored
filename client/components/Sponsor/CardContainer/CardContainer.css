@@ -1,6 +1,7 @@
 .sponsor-card-container{
 	display: flex;
 	align-items: center;
+    padding-left: 8px;
 }
 .sponsor-card-container-sub{
 	display: flex;
