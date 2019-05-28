@@ -3,6 +3,7 @@
     border: 1px solid rgba(0,0,0,.15);
     margin: 14px;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .sponser-card:hover{

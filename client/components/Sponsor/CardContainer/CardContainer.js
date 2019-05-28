@@ -41,8 +41,7 @@ class CardContainer extends React.Component{
 		}
 	}
 
-	changeDataSet(input){
-		let current = this.state.current
+	changeDataSet(input, current){
 		let counter = Number(current[5])
 		if (input === 'prev') {
 			if(current !== 'group1') {
@@ -75,7 +74,7 @@ class CardContainer extends React.Component{
 			<section className="sponsor-card-container">
 
 				<div className={leftButtonStyle}>
-					<button id="sponsor-card-container-button-prev" onClick={()=>this.changeDataSet("prev")}><i className="fas fa-angle-left"></i></button>
+					<button id="sponsor-card-container-button-prev" onClick={()=>this.changeDataSet("prev", this.state.current)}><i className="fas fa-angle-left"></i></button>
 				</div>
 
 				<div className="sponsor-card-container-sub">
@@ -86,7 +85,7 @@ class CardContainer extends React.Component{
 				</div>
 
 				<div className={rightButtonStyle}>
-					<button id="sponsor-card-container-button-next" onClick={()=>this.changeDataSet("next")}><i className="fas fa-angle-right"></i></button>
+					<button id="sponsor-card-container-button-next" onClick={()=>this.changeDataSet("next", this.state.current)}><i className="fas fa-angle-right"></i></button>
 				</div>
 
 			</section>

@@ -11,7 +11,8 @@ class App extends React.Component{
 		super(props)
 		this.state= {
 			isModalOpen : false,
-			data: null
+			data: null,
+			error : false
 		}
 		this.getRestaurantData = this.getRestaurantData.bind(this)
 		this.toggleModal = this.toggleModal.bind(this)
@@ -26,7 +27,7 @@ class App extends React.Component{
 	getRestaurantData(axios, id){
 	  	APIgetRestaurantData(axios, id)
 	  	.then(data => this.setState({data}))
-	  	.catch(e=>console.log(e))
+	  	.catch(error=>this.setState({error: true}))
 	}
 
 	toggleModal(){

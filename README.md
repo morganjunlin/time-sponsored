@@ -1,9 +1,9 @@
 # FEC Service Server (James Kim)
 > This server is rendering two different sections
 
-![](test_may_27.png)
+![](test_may_28.png)
 
-Last Date of Unit tests : May 27
+Unit tests last updated at May 28
 
 This service server is responsible for rendering two different sections. One is a component that has a little button. If you click it, then a popup window will show up on top of the current page. This is something called a portal. This part was little bit tricky because it has to have an additional "div" in the index.html file. It wasn't easy to come up with without knowing the concept of react portals. 
 
