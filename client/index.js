@@ -46,7 +46,7 @@ ReactDOM.render(<Sponsor />, document.getElementById('sponsored-root'))
 
 
 let menuPageNav = document.getElementById("menuPageNav-content")
-let bigContainer1 = document.getElementById("fake-menu-root")
+let bigContainer1 = document.getElementById("menu-root")
 let stickyPosition = menuPageNav.offsetTop
 window.onscroll = () => {
   if (window.pageYOffset >= stickyPosition) {
