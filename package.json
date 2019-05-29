@@ -7,18 +7,22 @@
     "test": "jest",
     "test:w": "jest --watchAll",
     "test:c": "jest --coverage",
-    "dev:server": "nodemon server/index.js",
+    "dev:server": "env-cmd nodemon server/index.js",
     "dev:static": "webpack -d -w",
     "dev:client": "webpack-dev-server --open -d",
     "dev:seed": "node database/seed.js",
     "start": "node server/index.js",
     "build": "webpack -p"
   },
+  "engine":{
+    "node": "10.13.0"
+  }
   "author": "James Jongho Kim",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
     "cors": "^2.8.5",
+    "env-cmd": "^9.0.1",
     "express": "^4.16.4",
     "moment": "^2.24.0",
     "mongoose": "^5.5.8",
