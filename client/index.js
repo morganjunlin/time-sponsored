@@ -86,13 +86,13 @@ window.onscroll = () => {
     nav_about.classList.remove("menuPageNav-focus")
   } 
 
-  if (window.pageYOffset >= aboutPosition) {
+  if (window.pageYOffset >= aboutPosition-100) {
   	nav_menu.classList.remove("menuPageNav-focus")
     nav_about.classList.add("menuPageNav-focus")
     nav_reviews.classList.remove("menuPageNav-focus")
   } 
 
-  if (window.pageYOffset >= reviewsPosition) {
+  if (window.pageYOffset >= reviewsPosition+200) {
   	nav_about.classList.remove("menuPageNav-focus")
     nav_reviews.classList.add("menuPageNav-focus")
   } 
@@ -106,10 +106,10 @@ nav_menu.addEventListener('click', ()=> {
 
 nav_about.addEventListener('click', ()=> {
 	console.log("About Clicked")
-	window.scroll(0, aboutPosition)
+	window.scroll(0, aboutPosition-100)
 })
 
 nav_reviews.addEventListener('click', ()=> {
 	console.log("Reviews Clicked")
-	window.scroll(0, reviewsPosition)
+	window.scroll(0, reviewsPosition+200)
 })
