@@ -4,19 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node server/index.js",
+    "build": "webpack -p",
     "test": "jest",
     "test:w": "jest --watchAll",
     "test:c": "jest --coverage",
     "dev:server": "env-cmd nodemon server/index.js",
     "dev:static": "webpack -d -w",
     "dev:client": "webpack-dev-server --open -d",
-    "dev:seed": "node database/seed.js",
-    "start": "node server/index.js",
-    "build": "webpack -p"
+    "dev:seed": "node database/seed.js"
   },
   "engine":{
     "node": "10.13.0"
-  }
+  },
   "author": "James Jongho Kim",
   "license": "ISC",
   "dependencies": {

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-let DB_URL = (process.env.NODE_ENV === 'development') ? "mongodb://127.0.0.1:27017/grubhub" : "mongodb+srv://hackreactortest:hackreactortest@cluster0-7iwj5.mongodb.net/test?retryWrites=true&w=majority"
+let DB_URL = (process.env.NODE_ENV === 'development') ? "mongodb://127.0.0.1:27017/grubhub" : `mongodb+srv://hackreactortest:${process.env.DB_PW}@cluster0-7iwj5.mongodb.net/test?retryWrites=true&w=majority`
 
 mongoose.connect(DB_URL, {
 	useNewUrlParser: true,
