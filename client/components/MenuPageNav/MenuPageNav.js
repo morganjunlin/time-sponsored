@@ -12,9 +12,9 @@ class MenuPageNav extends React.Component{
 		return(
 			<section className="menuPageNav-container" id="menuPageNav-content">
 				<div className="menuPageNav-content">
-					<a href="#menu-root" className="menuPageNav-menu">Menu</a>
-					<a href="#about-root" className="menuPageNav-about">About</a>
-					<a href="#reviews-root" className="menuPageNav-reviews">Reviews</a>
+					<a id="menuPageNav-menu" className="menuPageNav-menu">Menu</a>
+					<a id="menuPageNav-about" className="menuPageNav-about">About</a>
+					<a id="menuPageNav-reviews" className="menuPageNav-reviews">Reviews</a>
 				</div>
 			</section>
 			)

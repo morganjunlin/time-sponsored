@@ -16,6 +16,7 @@
     font-size: 24px;
     font-weight: 400;
     padding: 0 !important;
+    cursor: pointer;
 }
 
 .order-delivery-exit button:hover{

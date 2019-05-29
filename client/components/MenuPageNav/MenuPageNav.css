@@ -20,35 +20,24 @@
 	margin-right: 15px;
 	cursor: pointer;
 	text-decoration: none;
-	color: black;
+	color: rgba(0,0,0,0.55);
   padding: 15px 0;
   box-sizing: border-box;
 }
 
-.menuPageNav-menu{
-    border-bottom: 3px solid blue;
+.menuPageNav-focus{
+  color:black !important;
+  border-bottom: 3px solid blue;
 }
 
-.menuPageNav-content a:nth-child(2){
-  color: rgba(0,0,0,0.55);
-}
-
-.menuPageNav-content a:nth-child(2):hover{
-  color: black;
-}
-
-.menuPageNav-content a:nth-child(3){
-  color: rgba(0,0,0,0.55);
-}
-
-.menuPageNav-content a:nth-child(3):hover{
-  color: black;
+.menuPageNav-content a:hover{
+  color:black !important;
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .menuPageNav-sticky {
   position: fixed;
-  top: 0;
+  top: 60px;
   width: 75%;
 }
 
