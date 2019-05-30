@@ -1,16 +1,17 @@
 const path = require("path");
+const BrotliPlugin = require('brotli-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
   entry: path.resolve(__dirname, "./client/"),
   output: {
       path: path.resolve(__dirname, "./static"),
       filename: "bundle.js"
     },
-  devServer:{
-    contentBase: './static',
-    port: 3005
-  },
+  // devServer:{
+  //   contentBase: './static',
+  //   port: 3005
+  // },
 	module: {
 		rules: [{
         test: /\.js[x]?/,
@@ -24,17 +25,25 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          {
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader"
-          }
-        ]
+         use:['style-loader','css-loader']
       }]
 	},
 	resolve: {
 		extensions: ['.js', '.jsx']
-	}
+	},
+  plugins: [
+    new CompressionPlugin({
+    filename: '[path].gz[query]',
+    algorithm: 'gzip',
+    test: /\.(js|css|html|svg)$/,
+    threshold: 8192,
+    minRatio: 0.8
+    }),
+    new BrotliPlugin({
+      asset: '[path].br[query]',
+      test: /\.(js|css|html|svg)$/,
+      threshold: 10240,
+      minRatio: 0.8
+    })
+  ]
 }

@@ -5,7 +5,11 @@ const path = require('path')
 const routes = require('./routes')
 const PORT = process.env.PORT || 3400
 
+const expressStaticGzip = require("express-static-gzip");
+
 const app = express()
+
+// console.log(process.env.NODE_ENV) //'development'
 
 app.use(cors())
 app.use(express.json())
@@ -17,7 +21,14 @@ app.get('/', (req,res)=> {
 })
 
 //serving static files
-app.use("/restaurants/time_sponsored", express.static(path.resolve(__dirname, '../static')))
+// app.use("/restaurants/time_sponsored", express.static(path.resolve(__dirname, '../static')))
+
+//serving compressed bundle.js
+app.use("/restaurants/time_sponsored", expressStaticGzip(path.resolve(__dirname,'../static'), {
+	enableBrotli: true,
+	orderPreference: ['br', 'gz']
+}))
+
 
 //api requests from the client
 app.use('/api', routes)
