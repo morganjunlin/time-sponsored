@@ -1,20 +1,42 @@
 import React from 'react'
 import './Schedule.css'
 import Calendar from './Calendar/Calendar'
+import Time from './Time/Time'
 
 class Schedule extends React.Component{
 	constructor(props){
 		super(props)
 		this.state={
-			button_selected: "today" // "asap" || "today" || "later"
+			button_selected: "today", // "asap" || "today" || "later",
+			time_selected: "11:00am",
+			date_selected: null,
+			later_time_selected: "12:00pm"
 		}
+		
 		this.button_changer=this.button_changer.bind(this)
+		this.time_changer=this.time_changer.bind(this)
+		this.date_changer=this.date_changer.bind(this)
+		this.later_time_changer=this.later_time_changer.bind(this)
+
 		this.button_view_controller=this.button_view_controller.bind(this)
 		this.item_view_controller=this.item_view_controller.bind(this)
+
 	}
 
 	button_changer(button_selected){
 		this.setState({button_selected})
+	}
+
+	time_changer(time_selected){
+		this.setState({time_selected})
+	}
+
+	date_changer(date_selected){
+		this.setState({date_selected})
+	}
+
+	later_time_changer(later_time_selected){
+		this.setState({later_time_selected})
 	}
 
 	button_view_controller(button_selected){
@@ -49,30 +71,11 @@ class Schedule extends React.Component{
 				</section>
 				)
 		} else if (button_selected === 'today'){
-			return(
-				<section className="order-schedule-items-today">
-					<select className="order-schedule-items-today-select">
-					  <option> 8:00am </option>
-					  <option> 9:00am </option>
-					  <option> 10:00am </option>
-					  <option> 11:00am </option>
-					  <option> 12:00am </option>
-					  <option> 1:00pm </option>
-					  <option> 1:00pm </option>
-					  <option> 2:00pm </option>
-					  <option> 3:00pm </option>
-					  <option> 4:00pm </option>
-					  <option> 5:00pm </option>
-					  <option> 6:00pm </option>
-					  <option> 7:00pm </option>
-					  <option> 8:00pm </option>
-					  <option> 9:00pm </option>
-					  <option> 10:00pm </option>
-					</select>
-				</section>
-				)
+			return <Time time_changer={this.time_changer} time_selected={this.state.time_selected}/>
+		} else if (button_selected === 'later' && this.state.date_selected) {
+			return <Time time_changer={this.later_time_changer} time_selected={this.state.later_time_selected}/>
 		} else if (button_selected === 'later'){
-			return <Calendar toggleModal={this.props.toggleModal}/>
+			return <Calendar date_changer={this.date_changer}/>
 		}
 	}
 
@@ -97,6 +100,11 @@ class Schedule extends React.Component{
 			}
 			</div>
 
+			{
+				(this.state.date_selected) &&
+				<p id="later_date_time_text">{this.state.date_selected} {this.state.later_time_selected}</p>
+			}
+
 			<section className="order-schedule-items">
 			{
 				this.item_view_controller(this.state.button_selected)
@@ -104,7 +112,7 @@ class Schedule extends React.Component{
 			</section>
 
 			<section className="order-schedule-pickup-button">
-				<button onClick={toggleModal}>Pickup at 11:15am</button>
+				<button onClick={toggleModal}>Pickup at {(this.state.date_selected)? this.state.later_time_selected : this.state.time_selected}</button>
 			</section>
 
 		</section>

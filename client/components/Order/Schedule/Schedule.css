@@ -137,3 +137,14 @@
 .order-schedule-pickup-button button:hover{
     background-color: #0058b8;
 }
+
+
+#later_date_time_text {
+    text-align: center;
+    cursor: pointer;
+    color :#0070eb;
+}
+
+#later_date_time_text:hover {
+    color :#0058b8;
+}

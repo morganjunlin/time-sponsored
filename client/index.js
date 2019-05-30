@@ -69,11 +69,11 @@ let nav_reviews = document.getElementById("menuPageNav-reviews")
 nav_menu.classList.add("menuPageNav-focus")
 
 window.onscroll = () => {
-	// console.log("window.pageYOffset" , window.pageYOffset)
-	// console.log("stickyPosition" , stickyPosition)
-	// console.log("menuPosition" , menuPosition)
-	// console.log("aboutPosition" , aboutPosition)
-	// console.log("reviewsPosition" , reviewsPosition)
+	console.log("window.pageYOffset" , window.pageYOffset)
+	console.log("stickyPosition" , stickyPosition)
+	console.log("menuPosition" , menuPosition)
+	console.log("aboutPosition" , aboutPosition)
+	console.log("reviewsPosition" , reviewsPosition)
 
   if (window.pageYOffset >= stickyPosition) {
     menuPageNav.classList.add("menuPageNav-sticky")

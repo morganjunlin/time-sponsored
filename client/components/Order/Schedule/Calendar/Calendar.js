@@ -34,13 +34,13 @@ class Calendar extends React.Component{
 				}
 
 				<span id="order-today">{moment().format("DD")}</span>
-				<span onClick={this.props.toggleModal}>{moment().add(1, 'days').format("DD")}</span>
-				<span onClick={this.props.toggleModal}>{moment().add(2, 'days').format("DD")}</span>
-				<span onClick={this.props.toggleModal}>{moment().add(3, 'days').format("DD")}</span>
-				<span onClick={this.props.toggleModal}>{moment().add(4, 'days').format("DD")}</span>
-				<span onClick={this.props.toggleModal}>{moment().add(5, 'days').format("DD")}</span>
-				<span onClick={this.props.toggleModal}>{moment().add(6, 'days').format("DD")}</span>
-				<span onClick={this.props.toggleModal}>{moment().add(7, 'days').format("DD")}</span>
+				<span onClick={()=>this.props.date_changer(moment().add(1, 'days').format("MMM DD"))}>{moment().add(1, 'days').format("DD")}</span>
+				<span onClick={()=>this.props.date_changer(moment().add(2, 'days').format("MMM DD"))}>{moment().add(2, 'days').format("DD")}</span>
+				<span onClick={()=>this.props.date_changer(moment().add(3, 'days').format("MMM DD"))}>{moment().add(3, 'days').format("DD")}</span>
+				<span onClick={()=>this.props.date_changer(moment().add(4, 'days').format("MMM DD"))}>{moment().add(4, 'days').format("DD")}</span>
+				<span onClick={()=>this.props.date_changer(moment().add(5, 'days').format("MMM DD"))}>{moment().add(5, 'days').format("DD")}</span>
+				<span onClick={()=>this.props.date_changer(moment().add(6, 'days').format("MMM DD"))}>{moment().add(6, 'days').format("DD")}</span>
+				<span onClick={()=>this.props.date_changer(moment().add(7, 'days').format("MMM DD"))}>{moment().add(7, 'days').format("DD")}</span>
 				</div>
 			</section>
 			)
