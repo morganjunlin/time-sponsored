@@ -69,11 +69,11 @@ let nav_reviews = document.getElementById("menuPageNav-reviews")
 nav_menu.classList.add("menuPageNav-focus")
 
 window.onscroll = () => {
-	console.log("window.pageYOffset" , window.pageYOffset)
-	console.log("stickyPosition" , stickyPosition)
-	console.log("menuPosition" , menuPosition)
-	console.log("aboutPosition" , aboutPosition)
-	console.log("reviewsPosition" , reviewsPosition)
+	// console.log("window.pageYOffset" , window.pageYOffset)
+	// console.log("stickyPosition" , stickyPosition)
+	// console.log("menuPosition" , menuPosition)
+	// console.log("aboutPosition" , aboutPosition)
+	// console.log("reviewsPosition" , reviewsPosition)
 
   if (window.pageYOffset >= stickyPosition) {
     menuPageNav.classList.add("menuPageNav-sticky")
@@ -86,13 +86,13 @@ window.onscroll = () => {
     nav_about.classList.remove("menuPageNav-focus")
   } 
 
-  if (window.pageYOffset >= aboutPosition-100) {
+  if (window.pageYOffset >= aboutPosition) {
   	nav_menu.classList.remove("menuPageNav-focus")
     nav_about.classList.add("menuPageNav-focus")
     nav_reviews.classList.remove("menuPageNav-focus")
   } 
 
-  if (window.pageYOffset >= reviewsPosition+200) {
+  if (window.pageYOffset >= reviewsPosition) {
   	nav_about.classList.remove("menuPageNav-focus")
     nav_reviews.classList.add("menuPageNav-focus")
   } 
@@ -100,16 +100,16 @@ window.onscroll = () => {
 
 
 nav_menu.addEventListener('click', ()=> {
-	console.log("Menu Clicked")
+	// console.log("Menu Clicked")
 	window.scroll(0, stickyPosition+1)
 })
 
 nav_about.addEventListener('click', ()=> {
-	console.log("About Clicked")
-	window.scroll(0, aboutPosition-100)
+	// console.log("About Clicked")
+	window.scroll(0, aboutPosition)
 })
 
 nav_reviews.addEventListener('click', ()=> {
-	console.log("Reviews Clicked")
-	window.scroll(0, reviewsPosition+200)
+	// console.log("Reviews Clicked")
+	window.scroll(0, reviewsPosition)
 })
