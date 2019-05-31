@@ -4,6 +4,7 @@ const cors = require('cors')
 const path = require('path')
 const routes = require('./routes')
 const PORT = process.env.PORT || 3400
+const nocache = require('nocache')
 
 const expressStaticGzip = require("express-static-gzip");
 
@@ -14,6 +15,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
+app.use(nocache())
 
 //testing purpose
 app.get('/', (req,res)=> {
