@@ -58,8 +58,8 @@ let reviews_root_container = document.getElementById("reviews-root")
 
 let stickyPosition = menuPageNav.offsetTop
 let menuPosition = menu_root_container.offsetTop
-let aboutPosition = about_root_container.offsetTop
-let reviewsPosition = reviews_root_container.offsetTop
+let aboutPosition = about_root_container.offsetTop - 100
+let reviewsPosition = reviews_root_container.offsetTop + 100
 
 let nav_menu = document.getElementById("menuPageNav-menu")
 let nav_about = document.getElementById("menuPageNav-about")
