@@ -1,11 +1,19 @@
 const { Pool } = require('pg')
 
+// const pool = new Pool({
+//   user: 'morganlin',
+//   host: 'localhost',
+//   database: 'grubhub',
+//   password: '',
+//   max: 50
+// })
+
 const pool = new Pool({
-  user: 'morganlin',
-  host: 'localhost',
+  host: 'ec2-18-222-1-47.us-east-2.compute.amazonaws.com',
   database: 'grubhub',
-  password: '',
-  max: 50
+  user: 'ubuntu',
+  password: 'password',
+  port: 5432
 })
 
 module.exports = {
