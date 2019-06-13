@@ -1,0 +1,101 @@
+{
+  "intermediate": [
+    {
+      "timestamp": "2019-06-10T23:13:10.647Z",
+      "scenariosCreated": 4998,
+      "scenariosCompleted": 1246,
+      "requestsCompleted": 1246,
+      "rps": {
+        "mean": 499.22,
+        "count": 4998
+      },
+      "latency": {
+        "min": 89.53,
+        "max": 7454.34,
+        "median": 4228.83,
+        "p95": 6846.66,
+        "p99": 7193.01
+      },
+      "scenarioDuration": {
+        "min": 115.88,
+        "max": 7454.86,
+        "median": 4199.38,
+        "p95": 6848.96,
+        "p99": 7193.76
+      },
+      "errors": {},
+      "codes": {
+        "200": 1246
+      },
+      "matches": 0
+    },
+    {
+      "timestamp": "2019-06-10T23:13:20.644Z",
+      "scenariosCreated": 5000,
+      "scenariosCompleted": 1638,
+      "requestsCompleted": 1638,
+      "rps": {
+        "mean": 500.23,
+        "count": 5000
+      },
+      "latency": {
+        "min": 7544,
+        "max": 9989.9,
+        "median": 8913.86,
+        "p95": 9878.89,
+        "p99": 9952.72
+      },
+      "scenarioDuration": {
+        "min": 7544.53,
+        "max": 9990.35,
+        "median": 8946.55,
+        "p95": 9882.05,
+        "p99": 9950.85
+      },
+      "errors": {
+        "ENFILE": 702,
+        "ECONNRESET": 315,
+        "ETIMEDOUT": 1708,
+        "ESOCKETTIMEDOUT": 406
+      },
+      "codes": {
+        "200": 1638
+      },
+      "matches": 0
+    }
+  ],
+  "aggregate": {
+    "timestamp": "2019-06-10T23:13:27.159Z",
+    "scenariosCreated": 10000,
+    "scenariosCompleted": 5697,
+    "requestsCompleted": 5697,
+    "rps": {
+      "mean": 377.05,
+      "count": 10000
+    },
+    "latency": {
+      "min": 89.53,
+      "max": 9999.97,
+      "median": 7751.79,
+      "p95": 9797.39,
+      "p99": 9951.43
+    },
+    "scenarioDuration": {
+      "min": 115.88,
+      "max": 10000.77,
+      "median": 7613.53,
+      "p95": 9788.66,
+      "p99": 9946.32
+    },
+    "errors": {
+      "ENFILE": 702,
+      "ECONNRESET": 315,
+      "ETIMEDOUT": 2613,
+      "ESOCKETTIMEDOUT": 673
+    },
+    "codes": {
+      "200": 5697
+    },
+    "matches": 0
+  }
+}

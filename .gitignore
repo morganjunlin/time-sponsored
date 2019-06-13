@@ -5,3 +5,5 @@ static/bundle.js
 static/bundle.js.br
 static/bundle.js.gz
 .env
+/data/mongo.json
+/data/psql.csv

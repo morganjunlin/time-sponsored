@@ -12,7 +12,10 @@
     "dev:server": "env-cmd nodemon server/index.js",
     "dev:static": "webpack -d -w",
     "dev:client": "webpack-dev-server --open -d",
-    "dev:seed": "node database/seed.js"
+    "generate:json": "node data/mongo/jsonGenerator.js",
+    "generate:csv": "node data/psql/csvGenerator.js",
+    "seed:mongo": "mongoimport --db grubhub --collection grubhubs --file data/mongo.json --jsonArray",
+    "seed:psql": "psql -c COPY restaurants FROM '/Users/morganlin/Desktop/workspace/tormund-and-big-lady/sdc/time-sponsored/data/psql.csv' DELIMITER ',' CSV HEADER;"
   },
   "engine": {
     "node": "10.13.0"
@@ -20,15 +23,23 @@
   "author": "James Jongho Kim",
   "license": "ISC",
   "dependencies": {
+    "assert": "^2.0.0",
     "axios": "^0.18.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "express-static-gzip": "^1.1.3",
+    "fs": "0.0.1-security",
     "moment": "^2.24.0",
+    "mongodb": "^3.2.7",
     "mongoose": "^5.5.8",
+    "morgan": "^1.9.1",
     "nocache": "^2.1.0",
+    "pg": "^7.11.0",
+    "pg-hstore": "^2.3.3",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "save": "^2.4.0",
+    "sequelize": "^5.8.7"
   },
   "babel": {
     "presets": [

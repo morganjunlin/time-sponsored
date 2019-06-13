@@ -1,10 +1,13 @@
-const db = require('../database/index')
 const express = require('express')
 const cors = require('cors')
 const path = require('path')
-const routes = require('./routes')
+// const mongo = require('./mongo-mongoose/routes')
+const mongo = require('./mongo-raw/routes')
+// const psql = require('./psql-sequelize/routes')
+const psql = require('./psql-raw/routes')
 const PORT = process.env.PORT || 3400
 const nocache = require('nocache')
+// const morgan = require('morgan')
 
 const expressStaticGzip = require("express-static-gzip");
 
@@ -16,6 +19,7 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(nocache())
+// app.use(morgan('dev'))
 
 //testing purpose
 app.get('/', (req,res)=> {
@@ -33,7 +37,9 @@ app.use("/restaurants/time_sponsored", expressStaticGzip(path.resolve(__dirname,
 
 
 //api requests from the client
-app.use('/api', routes)
+app.use('/api/mongo', mongo)
+app.use('/api/psql', psql)
+
 
 //listening on 3000
 app.listen(PORT, ()=> console.log("Server is up and running on ", PORT))
