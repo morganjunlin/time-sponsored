@@ -1,43 +1,38 @@
-# FEC Service Server (James Kim)
-> This server is rendering two different sections
-
-![](test_may_28.png)
-
-Unit tests last updated at May 28
-
-This service server is responsible for rendering two different sections. One is a component that has a little button. If you click it, then a popup window will show up on top of the current page. This is something called a portal. This part was little bit tricky because it has to have an additional "div" in the index.html file. It wasn't easy to come up with without knowing the concept of react portals. 
-
-The other section is a component that has a slideshow like a carousel. It shows a list of sponsored restaurants. First 3 restaurants will be shown at first, and then when user clicks the next button, then it slides to the next 3 restaurants.
+# Grubhub Mock-Up System Design Optimization
+> Refactored DBMS for AWS EC2 Scalability
 
 ## Related Projects
 
-* [Nav, About sections](https://github.com/hrla29-group-targaryen/nav-about)
-* [Menu, Cart sections](https://github.com/hrla29-group-targaryen/menu-cart)
-* [Review, Footer sections](https://github.com/hrla29-group-targaryen/reviews)
+* [Nav, About sections](https://github.com/matthewmata/nav-about)
+* [Menu, Cart sections](https://github.com/tormund-and-big-lady/menu_cart_SDC)
+* [Review, Footer sections](https://github.com/gabriellehong/systemDesign_HubGrub)
+
+### Requirements
+* [PostgreSQL] (https://www.postgresql.org/download/linux/ubuntu/)
 
 ### Usage
 
+The `master` branch is for AWS EC2 deployment in mind. The `develop` branch is for local development.
+
 ```
-git clone https://github.com/hrla29-group-targaryen/time-sponsored.git
+git clone https://github.com/tormund-and-big-lady/time-sponsored.git
 cd time-sponsored
 npm install
-npm start
+npm run build
+npm run server:start
 ```
 
-### Requirements
+To generate CSV/Table insertion:
 
-You need to install Nodejs.
+```
+npm run generate:csv
+npm run psql:create
+npm run seed:psql
+```
 
 ### Development
 
 * [react.js](https://www.npmjs.com/package/react) - The official React.js website
 * [express.js](https://www.npmjs.com/package/express) - The official Express.js website
-* [mongoose](https://www.npmjs.com/package/mongoose) - The official Mongoose website
 * [webpack](https://www.npmjs.com/package/webpack) - The official Webpack website
-
-## Meta
-
-James Jongho Kim 
-- [Github](https://github.com/april9288) - This is my Github page
-
 
