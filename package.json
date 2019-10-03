@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "server:start": "pm2 start server/index.js -i max",
+    "server:stop": "pm2 stop server/index.js",
     "start": "node server/index.js",
     "build": "webpack -p",
     "test": "jest",
@@ -14,13 +16,14 @@
     "dev:client": "webpack-dev-server --open -d",
     "generate:json": "node data/mongo/jsonGenerator.js",
     "generate:csv": "node data/psql/csvGenerator.js",
+    "psql:create": "createdb grubhub && psql -c CREATE TABLE restaurants (id SERIAL PRIMARY KEY, image VARCHAR(255), name VARCHAR(255), categories VARCHAR(255) ARRAY, ratings DECIMAL, counts INTEGER, waitingtime VARCHAR(255));",
     "seed:mongo": "mongoimport --db grubhub --collection grubhubs --file data/mongo.json --jsonArray",
-    "seed:psql": "psql -c COPY restaurants FROM '/Users/morganlin/Desktop/workspace/tormund-and-big-lady/sdc/time-sponsored/data/psql.csv' DELIMITER ',' CSV HEADER;"
+    "seed:psql": "psql -c COPY restaurants FROM '~/time-sponsored/psql.csv' DELIMITER ',' CSV HEADER;"
   },
   "engine": {
     "node": "10.13.0"
   },
-  "author": "James Jongho Kim",
+  "author": "Morgan Jun Lin",
   "license": "ISC",
   "dependencies": {
     "assert": "^2.0.0",
@@ -70,6 +73,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
     "jest-cli": "^24.8.0",
+    "pm2": "^3.5.1",
     "react-test-renderer": "^16.8.6",
     "style-loader": "^0.23.1",
     "webpack": "^4.31.0",
