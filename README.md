@@ -7,10 +7,10 @@
 * [Menu, Cart sections](https://github.com/tormund-and-big-lady/menu_cart_SDC)
 * [Review, Footer sections](https://github.com/gabriellehong/systemDesign_HubGrub)
 
-### Requirements
+## Requirements
 * [PostgreSQL] (https://www.postgresql.org/download/linux/ubuntu/)
 
-### Usage
+## Usage
 
 The `master` branch is for AWS EC2 deployment in mind. The `develop` branch is for local development.
 
@@ -30,7 +30,7 @@ npm run psql:create
 npm run seed:psql
 ```
 
-### Development
+## Development
 
 * [react.js](https://www.npmjs.com/package/react) - The official React.js website
 * [express.js](https://www.npmjs.com/package/express) - The official Express.js website
