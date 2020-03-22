@@ -1,11 +1,13 @@
 # Grubhub Mock-Up System Design Optimization
 > Refactored DBMS for AWS EC2 Scalability
 
+Time-Sponsored microservice inherited to optimize scalability. See original [here](https://github.com/hrla29-group-targaryen/time-sponsored).
+
 ## Related Projects
 
-* [Nav, About sections](https://github.com/matthewmata/nav-about)
-* [Menu, Cart sections](https://github.com/tormund-and-big-lady/menu_cart_SDC)
-* [Review, Footer sections](https://github.com/gabriellehong/systemDesign_HubGrub)
+* [Nav, About service](https://github.com/matthewmata/nav-about)
+* [Menu, Cart service](https://github.com/tormund-and-big-lady/menu_cart_SDC)
+* [Review, Footer service](https://github.com/gabriellehong/systemDesign_HubGrub)
 
 ## Requirements
 * [PostgreSQL] (https://www.postgresql.org/download/linux/ubuntu/)
